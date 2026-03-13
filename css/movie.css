@@ -1,0 +1,962 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= TEXT SHADOW (전체 공통) ================= */
+.title-todo-tag span,
+.todo-tag span,
+.project-title,
+.project-subtitle,
+.project-desc,
+.project-period,
+.overview-desc,
+.concept-desc,
+.typography-display,
+.keyword-item {
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.8),
+    0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= TAG (공통) ================= */
+.todo-tag {
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.todo-tag img {
+  width: 120px;
+  height: 40px;
+  display: block;
+}
+
+.todo-tag span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.title-todo-tag {
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.title-todo-tag img {
+  width: 250px;
+  height: 80px;
+  display: block;
+}
+
+.title-todo-tag span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 37px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ================= SECTION 1 : TODO DETAIL ================= */
+.todo-detail {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* 배경 비디오 최적화 */
+.todo-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.todo-hero {
+  max-width: 1400px;
+  padding: 0px 70px;
+  margin-left: 0;
+}
+
+.todo-hero-content {
+  max-width: 500px;
+  padding: 30px 0;
+}
+
+/* TITLE */
+.project-title {
+  color: #d2c4b1;
+  font-size: 70px;
+  padding: 30px 0;
+  display: block;
+}
+
+.project-subtitle {
+  color: #f8f7f2;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  max-width: 400px;
+  color: #f8f7f2;
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  margin-bottom: 15px;
+}
+
+/* PROJECT INFO */
+.project-txt {
+  padding: 90px 0 0;
+}
+
+.project-period-wrap,
+.project-tools-wrap,
+.project-cont-wrap {
+  margin-bottom: 10px;
+}
+
+.project-period {
+  color: #f8f7f2;
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  padding: 0px 7px;
+  margin-bottom: 15px;
+}
+
+/* TOOLS */
+.project-tools {
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.project-tools img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+}
+
+/* ================= SECTION 2 : TODO OVERVIEW ================= */
+.todo-overview {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../imges/Texture30.png) no-repeat center;
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+.overview-hero {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 70px;
+}
+
+/* OVERVIEW TOP */
+.overview-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.overview-top .todo-tag {
+  margin: 0 auto 20px;
+}
+
+.overview-desc {
+  text-align: center;
+  color: #f8f7f2;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.overview-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 0 auto 40px;
+}
+
+/* ================= OVERVIEW CONTENT (2x2 그리드 구조) ================= */
+.overview-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px;
+}
+
+/* 각 섹션 그리드 배치 */
+.overview-concept {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.overview-typography {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.overview-keyword {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.overview-color {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* tag 크기 override */
+.overview-content .todo-tag img {
+  width: 150px;
+  height: 50px;
+}
+
+.overview-content .todo-tag span {
+  font-size: 14px;
+}
+
+.overview-concept .todo-tag,
+.overview-typography .todo-tag,
+.overview-keyword .todo-tag,
+.overview-color .todo-tag {
+  margin: 0 0 20px;
+}
+
+/* CONCEPT */
+.concept-desc {
+  color: #f8f7f2;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* TYPOGRAPHY */
+.typography-display {
+  position: relative;
+  padding: 20px 40px;
+  z-index: 1;
+  font-size: 70px;
+  color: #f8f7f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.typography-display::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url(../imges/typo_bg.png) no-repeat center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* KEYWORD */
+.keyword-list {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.keyword-item {
+  font-size: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #f8f7f2;
+}
+
+.keyword-text {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.bracket {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+/* 네이비 도트 (왼쪽) */
+.keyword-text::before {
+  content: '';
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, #1a1a2e 1.2px, transparent 1.2px);
+  background-size: 5px 5px;
+  -webkit-mask-image: radial-gradient(
+    circle at 35% 50%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  mask-image: radial-gradient(
+    circle at 35% 50%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* 보라 도트 (오른쪽) */
+.keyword-text::after {
+  content: '';
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, #667eea 1.2px, transparent 1.2px);
+  background-size: 5px 5px;
+  -webkit-mask-image: radial-gradient(
+    circle at 65% 50%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  mask-image: radial-gradient(
+    circle at 65% 50%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* COLOR */
+.color-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0 40px;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.color-item span {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+
+  /* 젤리 그라데이션 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #f8f7f2 25%,
+    #e2e0d8 55%,
+    #cfcbbf 75%,
+    #a9a59a 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* 말랑한 입체감 */
+  text-shadow:
+    0 -2px 3px rgba(255, 255, 255, 0.3),
+    /* 윗 하이라이트 */ 0 3px 0 rgba(0, 0, 0, 0.35),
+    /* 하단 음영 */ 0 6px 12px rgba(0, 0, 0, 0.7),
+    /* 깊은 그림자 */ 0 0 15px rgba(255, 255, 255, 0.8); /* 젤리 글로우 */
+}
+.color-img {
+  width: 300px;
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* 중형 데스크탑 (1200px ~ 1399px) */
+@media (max-width: 1399px) {
+  .todo-hero {
+    max-width: 100%;
+    padding: 0 50px;
+  }
+
+  .overview-hero {
+    max-width: 100%;
+    padding: 50px;
+  }
+
+  .project-title {
+    font-size: 55px;
+  }
+
+  .project-subtitle {
+    font-size: 30px;
+  }
+
+  .project-desc {
+    font-size: 16px;
+    max-width: 350px;
+  }
+
+  .project-period {
+    font-size: 16px;
+  }
+
+  .typography-display {
+    font-size: 60px;
+  }
+
+  .overview-desc {
+    font-size: 15px;
+  }
+
+  .concept-desc {
+    font-size: 15px;
+  }
+
+  .color-img {
+    width: 250px;
+  }
+}
+
+/* 1200px부터 본격 축소 */
+@media (max-width: 1200px) {
+  /* 비디오 섹션 높이 조정 */
+  .todo-detail {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .todo-hero {
+    padding: 0 40px;
+  }
+
+  .todo-hero-content {
+    max-width: 450px;
+    padding: 20px 0;
+  }
+
+  .title-todo-tag img {
+    width: 200px;
+    height: 65px;
+  }
+
+  .title-todo-tag span {
+    font-size: 30px;
+  }
+
+  .project-title {
+    font-size: 45px;
+    padding: 20px 0;
+  }
+
+  .project-subtitle {
+    font-size: 26px;
+  }
+
+  .project-desc {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .project-period {
+    font-size: 15px;
+  }
+
+  .project-txt {
+    padding: 60px 0 0;
+  }
+
+  .project-tools img {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Overview 섹션 */
+  .overview-hero {
+    padding: 40px;
+  }
+
+  .overview-desc {
+    font-size: 14px;
+  }
+
+  /* 그리드 간격 축소 */
+  .overview-content {
+    gap: 30px;
+  }
+
+  .concept-desc {
+    font-size: 14px;
+  }
+
+  .typography-display {
+    font-size: 48px;
+    padding: 15px 30px;
+  }
+
+  /* 컬러 이미지 크기 대폭 축소 */
+  .color-list {
+    padding: 0 20px;
+  }
+
+  .color-img {
+    width: 180px;
+  }
+
+  .color-item span {
+    font-size: 12px;
+  }
+
+  /* 키워드 크기 조정 */
+  .keyword-item {
+    font-size: 22px;
+  }
+
+  .keyword-text {
+    width: 100px;
+    height: 100px;
+  }
+
+  .keyword-text::before,
+  .keyword-text::after {
+    width: 100px;
+    height: 100px;
+  }
+
+  .bracket {
+    height: 70px;
+  }
+}
+
+/* 900px부터 추가 축소 */
+@media (max-width: 900px) {
+  .todo-detail {
+    padding: 50px 0;
+  }
+
+  .todo-hero {
+    padding: 0 35px;
+  }
+
+  .todo-hero-content {
+    max-width: 100%;
+  }
+
+  .title-todo-tag img {
+    width: 180px;
+    height: 58px;
+  }
+
+  .title-todo-tag span {
+    font-size: 26px;
+  }
+
+  .project-title {
+    font-size: 38px;
+    padding: 18px 0;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .project-subtitle {
+    font-size: 24px;
+  }
+
+  .project-desc {
+    font-size: 14px;
+  }
+
+  .project-period {
+    font-size: 14px;
+  }
+
+  .project-txt {
+    padding: 50px 0 0;
+  }
+
+  .project-tools img {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* Overview 그리드 → 1열 전환 */
+  .overview-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 28px;
+  }
+
+  .overview-concept,
+  .overview-typography,
+  .overview-keyword,
+  .overview-color {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .overview-hero {
+    padding: 38px 35px;
+  }
+
+  .overview-desc {
+    font-size: 14px;
+  }
+
+  .concept-desc {
+    font-size: 14px;
+  }
+
+  .typography-display {
+    font-size: 42px;
+  }
+
+  /* 컬러 이미지 더 축소 */
+  .color-img {
+    width: 160px;
+  }
+
+  .keyword-list {
+    gap: 15px;
+  }
+}
+
+/* 모바일 (767px 이하) */
+@media (max-width: 767px) {
+  /* VIDEO 배경 최적화 - 세로 화면에서도 꽉 채우기 */
+  .todo-bg-video {
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* 비디오 섹션 패딩 조정 */
+  .todo-detail {
+    min-height: auto;
+    padding: 50px 0;
+  }
+
+  /* HERO 섹션 */
+  .todo-hero {
+    padding: 0 30px;
+  }
+
+  .todo-hero-content {
+    max-width: 100%;
+    padding: 15px 0;
+  }
+
+  /* TAG */
+  .title-todo-tag {
+    margin-top: 20px;
+  }
+
+  .title-todo-tag img {
+    width: 160px;
+    height: 55px;
+  }
+
+  .title-todo-tag span {
+    font-size: 24px;
+  }
+
+  .todo-tag {
+    margin-top: 25px;
+  }
+
+  .todo-tag img {
+    width: 90px;
+    height: 32px;
+  }
+
+  .todo-tag span {
+    font-size: 13px;
+  }
+
+  /* TITLE */
+  .project-title {
+    font-size: 32px;
+    padding: 15px 0;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .project-subtitle {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .project-desc {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* PROJECT INFO */
+  .project-txt {
+    padding: 40px 0 0;
+  }
+
+  .project-period {
+    font-size: 13px;
+  }
+
+  .project-tools {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project-tools img {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* OVERVIEW 섹션 */
+  .overview-hero {
+    padding: 35px 25px;
+  }
+
+  .overview-desc {
+    font-size: 13px;
+  }
+
+  /* 2x2 그리드 → 1열로 변경 */
+  .overview-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 25px;
+  }
+
+  .overview-concept,
+  .overview-typography,
+  .overview-keyword,
+  .overview-color {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .overview-content .todo-tag img {
+    width: 120px;
+    height: 42px;
+  }
+
+  .overview-content .todo-tag span {
+    font-size: 12px;
+  }
+
+  .concept-desc {
+    font-size: 13px;
+  }
+
+  /* TYPOGRAPHY */
+  .typography-display {
+    font-size: 40px;
+    padding: 18px 25px;
+  }
+
+  /* KEYWORD */
+  .keyword-list {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .keyword-item {
+    font-size: 19px;
+    gap: 7px;
+  }
+
+  .keyword-text {
+    width: 85px;
+    height: 85px;
+  }
+
+  .keyword-text::before,
+  .keyword-text::after {
+    width: 85px;
+    height: 85px;
+  }
+
+  .bracket {
+    height: 62px;
+  }
+
+  /* COLOR - 이미지 크기 대폭 축소 */
+  .color-list {
+    padding: 0 15px;
+    gap: 10px;
+  }
+
+  .color-img {
+    width: 140px;
+  }
+
+  .color-item {
+    gap: 15px;
+  }
+
+  .color-item span {
+    font-size: 11px;
+  }
+}
+
+/* 초소형 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .todo-detail {
+    padding: 40px 0;
+  }
+
+  .todo-hero {
+    padding: 0 20px;
+  }
+
+  .overview-hero {
+    padding: 30px 20px;
+  }
+
+  .title-todo-tag img {
+    width: 140px;
+    height: 48px;
+  }
+
+  .title-todo-tag span {
+    font-size: 20px;
+  }
+
+  .todo-tag img {
+    width: 80px;
+    height: 28px;
+  }
+
+  .todo-tag span {
+    font-size: 11px;
+  }
+
+  .project-title {
+    font-size: 26px;
+    padding: 12px 0;
+  }
+
+  .project-subtitle {
+    font-size: 17px;
+  }
+
+  .project-desc {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .project-period {
+    font-size: 12px;
+  }
+
+  .project-tools img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .overview-content .todo-tag img {
+    width: 110px;
+    height: 38px;
+  }
+
+  .overview-content .todo-tag span {
+    font-size: 11px;
+  }
+
+  .overview-desc {
+    font-size: 12px;
+  }
+
+  .concept-desc {
+    font-size: 12px;
+  }
+
+  .typography-display {
+    font-size: 32px;
+    padding: 15px 20px;
+  }
+
+  /* 컬러 이미지 최소 크기 */
+  .color-list {
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  .color-img {
+    width: 100px;
+  }
+
+  .color-item {
+    gap: 12px;
+  }
+
+  .color-item span {
+    font-size: 10px;
+  }
+
+  .keyword-item {
+    font-size: 17px;
+  }
+
+  .keyword-text {
+    width: 75px;
+    height: 75px;
+  }
+
+  .keyword-text::before,
+  .keyword-text::after {
+    width: 75px;
+    height: 75px;
+  }
+
+  .bracket {
+    height: 52px;
+  }
+}
