@@ -44,7 +44,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  font-size: 17px;
+  font-size: 18px; /* 17 → 18 */
   font-weight: 600;
   white-space: nowrap;
 }
@@ -67,7 +67,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  font-size: 37px;
+  font-size: 40px; /* 37 → 40 */
   font-weight: 600;
   white-space: nowrap;
 }
@@ -79,7 +79,6 @@ body {
   overflow: hidden;
 }
 
-/* 배경 비디오 최적화 */
 .todo-bg-video {
   position: absolute;
   top: 0;
@@ -93,7 +92,7 @@ body {
 
 .todo-hero {
   max-width: 1400px;
-  padding: 0px 70px;
+  padding: 0 70px;
   margin-left: 0;
 }
 
@@ -105,21 +104,21 @@ body {
 /* TITLE */
 .project-title {
   color: #d2c4b1;
-  font-size: 70px;
+  font-size: 76px; /* 70 → 76 */
   padding: 30px 0;
   display: block;
 }
 
 .project-subtitle {
   color: #f8f7f2;
-  font-size: 35px;
+  font-size: 38px; /* 35 → 38 */
   margin-bottom: 10px;
 }
 
 .project-desc {
   max-width: 400px;
   color: #f8f7f2;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.6;
   letter-spacing: 0.03em;
   margin-bottom: 15px;
@@ -138,15 +137,16 @@ body {
 
 .project-period {
   color: #f8f7f2;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.6;
   letter-spacing: 0.03em;
-  padding: 0px 7px;
+  padding: 0 7px;
   margin-bottom: 15px;
 }
 
 /* TOOLS */
 .project-tools {
+  display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 15px;
@@ -200,7 +200,7 @@ body {
 .overview-desc {
   text-align: center;
   color: #f8f7f2;
-  font-size: 16px;
+  font-size: 18px; /* 16 → 18 */
   line-height: 1.8;
 }
 
@@ -211,7 +211,7 @@ body {
   margin: 0 auto 40px;
 }
 
-/* ================= OVERVIEW CONTENT (2x2 그리드 구조) ================= */
+/* ================= OVERVIEW CONTENT (2x2 그리드) ================= */
 .overview-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -219,36 +219,30 @@ body {
   gap: 40px;
 }
 
-/* 각 섹션 그리드 배치 */
 .overview-concept {
   grid-column: 1;
   grid-row: 1;
 }
-
 .overview-typography {
   grid-column: 2;
   grid-row: 1;
 }
-
 .overview-keyword {
   grid-column: 1;
   grid-row: 2;
 }
-
 .overview-color {
   grid-column: 2;
   grid-row: 2;
 }
 
-/* tag 크기 override */
 .overview-content .todo-tag img {
   width: 150px;
   height: 50px;
 }
-
 .overview-content .todo-tag span {
-  font-size: 14px;
-}
+  font-size: 15px;
+} /* 14 → 15 */
 
 .overview-concept .todo-tag,
 .overview-typography .todo-tag,
@@ -260,7 +254,7 @@ body {
 /* CONCEPT */
 .concept-desc {
   color: #f8f7f2;
-  font-size: 16px;
+  font-size: 18px; /* 16 → 18 */
   line-height: 1.8;
 }
 
@@ -269,7 +263,7 @@ body {
   position: relative;
   padding: 20px 40px;
   z-index: 1;
-  font-size: 70px;
+  font-size: 75px; /* 70 → 75 */
   color: #f8f7f2;
   display: flex;
   align-items: center;
@@ -295,7 +289,7 @@ body {
 }
 
 .keyword-item {
-  font-size: 25px;
+  font-size: 27px; /* 25 → 27 */
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -385,11 +379,9 @@ body {
 }
 
 .color-item span {
-  font-size: 14px;
+  font-size: 15px; /* 14 → 15 */
   letter-spacing: 0.05em;
   font-weight: 800;
-
-  /* 젤리 그라데이션 */
   background: linear-gradient(
     to bottom,
     #ffffff 0%,
@@ -398,25 +390,23 @@ body {
     #cfcbbf 75%,
     #a9a59a 100%
   );
-
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  /* 말랑한 입체감 */
   text-shadow:
     0 -2px 3px rgba(255, 255, 255, 0.3),
-    /* 윗 하이라이트 */ 0 3px 0 rgba(0, 0, 0, 0.35),
-    /* 하단 음영 */ 0 6px 12px rgba(0, 0, 0, 0.7),
-    /* 깊은 그림자 */ 0 0 15px rgba(255, 255, 255, 0.8); /* 젤리 글로우 */
+    0 3px 0 rgba(0, 0, 0, 0.35),
+    0 6px 12px rgba(0, 0, 0, 0.7),
+    0 0 15px rgba(255, 255, 255, 0.8);
 }
+
 .color-img {
   width: 300px;
   height: auto;
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
 }
 
-/* ================= RESPONSIVE DESIGN ================= */
+/* ================= RESPONSIVE ================= */
 
 /* 중형 데스크탑 (1200px ~ 1399px) */
 @media (max-width: 1399px) {
@@ -424,58 +414,48 @@ body {
     max-width: 100%;
     padding: 0 50px;
   }
-
   .overview-hero {
     max-width: 100%;
     padding: 50px;
   }
 
   .project-title {
-    font-size: 55px;
-  }
-
+    font-size: 62px;
+  } /* 55 → 62 */
   .project-subtitle {
-    font-size: 30px;
-  }
-
+    font-size: 33px;
+  } /* 30 → 33 */
   .project-desc {
-    font-size: 16px;
+    font-size: 20px;
     max-width: 350px;
-  }
-
+  } /* 18 → 20 */
   .project-period {
-    font-size: 16px;
-  }
+    font-size: 20px;
+  } /* 18 → 20 */
 
   .typography-display {
-    font-size: 60px;
-  }
-
+    font-size: 65px;
+  } /* 60 → 65 */
   .overview-desc {
-    font-size: 15px;
-  }
-
+    font-size: 17px;
+  } /* 15 → 17 */
   .concept-desc {
-    font-size: 15px;
-  }
-
+    font-size: 17px;
+  } /* 15 → 17 */
   .color-img {
     width: 250px;
   }
 }
 
-/* 1200px부터 본격 축소 */
+/* 1200px 이하 */
 @media (max-width: 1200px) {
-  /* 비디오 섹션 높이 조정 */
   .todo-detail {
     min-height: auto;
     padding: 60px 0;
   }
-
   .todo-hero {
     padding: 0 40px;
   }
-
   .todo-hero-content {
     max-width: 450px;
     padding: 20px 0;
@@ -485,105 +465,85 @@ body {
     width: 200px;
     height: 65px;
   }
-
   .title-todo-tag span {
-    font-size: 30px;
-  }
+    font-size: 32px;
+  } /* 30 → 32 */
 
   .project-title {
-    font-size: 45px;
+    font-size: 50px;
     padding: 20px 0;
-  }
-
+  } /* 45 → 50 */
   .project-subtitle {
-    font-size: 26px;
-  }
-
+    font-size: 28px;
+  } /* 26 → 28 */
   .project-desc {
-    font-size: 15px;
+    font-size: 17px;
     max-width: 100%;
-  }
-
+  } /* 15 → 17 */
   .project-period {
-    font-size: 15px;
-  }
-
+    font-size: 17px;
+  } /* 15 → 17 */
   .project-txt {
     padding: 60px 0 0;
   }
-
   .project-tools img {
     width: 48px;
     height: 48px;
   }
 
-  /* Overview 섹션 */
   .overview-hero {
     padding: 40px;
   }
-
   .overview-desc {
-    font-size: 14px;
-  }
-
-  /* 그리드 간격 축소 */
+    font-size: 16px;
+  } /* 14 → 16 */
   .overview-content {
     gap: 30px;
   }
-
   .concept-desc {
-    font-size: 14px;
-  }
+    font-size: 16px;
+  } /* 14 → 16 */
 
   .typography-display {
-    font-size: 48px;
+    font-size: 52px;
     padding: 15px 30px;
-  }
+  } /* 48 → 52 */
 
-  /* 컬러 이미지 크기 대폭 축소 */
   .color-list {
     padding: 0 20px;
   }
-
   .color-img {
     width: 180px;
   }
-
   .color-item span {
-    font-size: 12px;
-  }
+    font-size: 13px;
+  } /* 12 → 13 */
 
-  /* 키워드 크기 조정 */
   .keyword-item {
-    font-size: 22px;
-  }
-
+    font-size: 24px;
+  } /* 22 → 24 */
   .keyword-text {
     width: 100px;
     height: 100px;
   }
-
   .keyword-text::before,
   .keyword-text::after {
     width: 100px;
     height: 100px;
   }
-
   .bracket {
     height: 70px;
   }
 }
 
-/* 900px부터 추가 축소 */
+/* 900px 이하 */
 @media (max-width: 900px) {
   .todo-detail {
     padding: 50px 0;
   }
-
   .todo-hero {
     padding: 0 35px;
   }
-
   .todo-hero-content {
     max-width: 100%;
   }
@@ -592,46 +552,39 @@ body {
     width: 180px;
     height: 58px;
   }
-
   .title-todo-tag span {
-    font-size: 26px;
-  }
+    font-size: 28px;
+  } /* 26 → 28 */
 
   .project-title {
-    font-size: 38px;
+    font-size: 42px; /* 38 → 42 */
     padding: 18px 0;
     white-space: normal;
     line-height: 1.3;
   }
-
   .project-subtitle {
-    font-size: 24px;
-  }
-
+    font-size: 26px;
+  } /* 24 → 26 */
   .project-desc {
-    font-size: 14px;
-  }
-
+    font-size: 16px;
+  } /* 14 → 16 */
   .project-period {
-    font-size: 14px;
-  }
-
+    font-size: 16px;
+  } /* 14 → 16 */
   .project-txt {
     padding: 50px 0 0;
   }
-
   .project-tools img {
     width: 45px;
     height: 45px;
   }
 
-  /* Overview 그리드 → 1열 전환 */
+  /* 2열 → 1열 */
   .overview-content {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 28px;
   }
-
   .overview-concept,
   .overview-typography,
   .overview-keyword,
@@ -643,24 +596,19 @@ body {
   .overview-hero {
     padding: 38px 35px;
   }
-
   .overview-desc {
-    font-size: 14px;
-  }
-
+    font-size: 16px;
+  } /* 14 → 16 */
   .concept-desc {
-    font-size: 14px;
-  }
+    font-size: 16px;
+  } /* 14 → 16 */
 
   .typography-display {
-    font-size: 42px;
-  }
-
-  /* 컬러 이미지 더 축소 */
+    font-size: 46px;
+  } /* 42 → 46 */
   .color-img {
     width: 160px;
   }
-
   .keyword-list {
     gap: 15px;
   }
@@ -668,7 +616,6 @@ body {
 
 /* 모바일 (767px 이하) */
 @media (max-width: 767px) {
-  /* VIDEO 배경 최적화 - 세로 화면에서도 꽉 채우기 */
   .todo-bg-video {
     object-fit: cover !important;
     object-position: center !important;
@@ -676,103 +623,83 @@ body {
     height: 100% !important;
   }
 
-  /* 비디오 섹션 패딩 조정 */
   .todo-detail {
     min-height: auto;
     padding: 50px 0;
   }
-
-  /* HERO 섹션 */
   .todo-hero {
     padding: 0 30px;
   }
-
   .todo-hero-content {
     max-width: 100%;
     padding: 15px 0;
   }
 
-  /* TAG */
   .title-todo-tag {
     margin-top: 20px;
   }
-
   .title-todo-tag img {
     width: 160px;
     height: 55px;
   }
-
   .title-todo-tag span {
-    font-size: 24px;
-  }
+    font-size: 26px;
+  } /* 24 → 26 */
 
   .todo-tag {
     margin-top: 25px;
   }
-
   .todo-tag img {
     width: 90px;
     height: 32px;
   }
-
   .todo-tag span {
-    font-size: 13px;
-  }
+    font-size: 14px;
+  } /* 13 → 14 */
 
-  /* TITLE */
   .project-title {
-    font-size: 32px;
+    font-size: 36px; /* 32 → 36 */
     padding: 15px 0;
     white-space: normal;
     line-height: 1.3;
   }
-
   .project-subtitle {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 12px;
-  }
-
+  } /* 20 → 22 */
   .project-desc {
     max-width: 100%;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.7;
-  }
-
-  /* PROJECT INFO */
+  } /* 13 → 15 */
   .project-txt {
     padding: 40px 0 0;
   }
-
   .project-period {
-    font-size: 13px;
-  }
+    font-size: 15px;
+  } /* 13 → 15 */
 
   .project-tools {
     display: flex;
     flex-wrap: wrap;
   }
-
   .project-tools img {
     width: 42px;
     height: 42px;
   }
 
-  /* OVERVIEW 섹션 */
   .overview-hero {
     padding: 35px 25px;
   }
-
   .overview-desc {
-    font-size: 13px;
-  }
+    font-size: 15px;
+  } /* 13 → 15 */
 
-  /* 2x2 그리드 → 1열로 변경 */
   .overview-content {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 25px;
   }
-
   .overview-concept,
   .overview-typography,
   .overview-keyword,
@@ -785,65 +712,54 @@ body {
     width: 120px;
     height: 42px;
   }
-
   .overview-content .todo-tag span {
-    font-size: 12px;
-  }
+    font-size: 13px;
+  } /* 12 → 13 */
 
   .concept-desc {
-    font-size: 13px;
-  }
+    font-size: 15px;
+  } /* 13 → 15 */
 
-  /* TYPOGRAPHY */
   .typography-display {
-    font-size: 40px;
+    font-size: 44px;
     padding: 18px 25px;
-  }
+  } /* 40 → 44 */
 
-  /* KEYWORD */
   .keyword-list {
     flex-direction: column;
     gap: 18px;
     align-items: flex-start;
   }
-
   .keyword-item {
-    font-size: 19px;
+    font-size: 21px;
     gap: 7px;
-  }
-
+  } /* 19 → 21 */
   .keyword-text {
     width: 85px;
     height: 85px;
   }
-
   .keyword-text::before,
   .keyword-text::after {
     width: 85px;
     height: 85px;
   }
-
   .bracket {
     height: 62px;
   }
 
-  /* COLOR - 이미지 크기 대폭 축소 */
   .color-list {
     padding: 0 15px;
     gap: 10px;
   }
-
   .color-img {
     width: 140px;
   }
-
   .color-item {
     gap: 15px;
   }
-
   .color-item span {
-    font-size: 11px;
-  }
+    font-size: 12px;
+  } /* 11 → 12 */
 }
 
 /* 초소형 모바일 (480px 이하) */
@@ -851,11 +767,9 @@ body {
   .todo-detail {
     padding: 40px 0;
   }
-
   .todo-hero {
     padding: 0 20px;
   }
-
   .overview-hero {
     padding: 30px 20px;
   }
@@ -864,38 +778,32 @@ body {
     width: 140px;
     height: 48px;
   }
-
   .title-todo-tag span {
-    font-size: 20px;
-  }
+    font-size: 22px;
+  } /* 20 → 22 */
 
   .todo-tag img {
     width: 80px;
     height: 28px;
   }
-
   .todo-tag span {
-    font-size: 11px;
-  }
+    font-size: 12px;
+  } /* 11 → 12 */
 
   .project-title {
-    font-size: 26px;
+    font-size: 30px;
     padding: 12px 0;
-  }
-
+  } /* 26 → 30 */
   .project-subtitle {
-    font-size: 17px;
-  }
-
+    font-size: 19px;
+  } /* 17 → 19 */
   .project-desc {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.8;
-  }
-
+  } /* 12 → 14 */
   .project-period {
-    font-size: 12px;
-  }
-
+    font-size: 14px;
+  } /* 12 → 14 */
   .project-tools img {
     width: 38px;
     height: 38px;
@@ -905,57 +813,47 @@ body {
     width: 110px;
     height: 38px;
   }
-
   .overview-content .todo-tag span {
-    font-size: 11px;
-  }
-
+    font-size: 12px;
+  } /* 11 → 12 */
   .overview-desc {
-    font-size: 12px;
-  }
-
+    font-size: 14px;
+  } /* 12 → 14 */
   .concept-desc {
-    font-size: 12px;
-  }
+    font-size: 14px;
+  } /* 12 → 14 */
 
   .typography-display {
-    font-size: 32px;
+    font-size: 36px;
     padding: 15px 20px;
-  }
+  } /* 32 → 36 */
 
-  /* 컬러 이미지 최소 크기 */
   .color-list {
     padding: 0 10px;
     gap: 8px;
   }
-
   .color-img {
     width: 100px;
   }
-
   .color-item {
     gap: 12px;
   }
-
   .color-item span {
-    font-size: 10px;
-  }
+    font-size: 11px;
+  } /* 10 → 11 */
 
   .keyword-item {
-    font-size: 17px;
-  }
-
+    font-size: 19px;
+  } /* 17 → 19 */
   .keyword-text {
     width: 75px;
     height: 75px;
   }
-
   .keyword-text::before,
   .keyword-text::after {
     width: 75px;
     height: 75px;
   }
-
   .bracket {
     height: 52px;
   }
