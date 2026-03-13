@@ -104,14 +104,14 @@ body {
 /* TITLE */
 .project-title {
   color: #d2c4b1;
-  font-size: 76px; /* 70 → 76 */
+  font-size: 76px;
   padding: 30px 0;
   display: block;
 }
 
 .project-subtitle {
   color: #f8f7f2;
-  font-size: 38px; /* 35 → 38 */
+  font-size: 38px;
   margin-bottom: 10px;
 }
 
@@ -200,7 +200,7 @@ body {
 .overview-desc {
   text-align: center;
   color: #f8f7f2;
-  font-size: 18px; /* 16 → 18 */
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -242,7 +242,7 @@ body {
 }
 .overview-content .todo-tag span {
   font-size: 15px;
-} /* 14 → 15 */
+}
 
 .overview-concept .todo-tag,
 .overview-typography .todo-tag,
@@ -254,7 +254,7 @@ body {
 /* CONCEPT */
 .concept-desc {
   color: #f8f7f2;
-  font-size: 18px; /* 16 → 18 */
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -263,7 +263,7 @@ body {
   position: relative;
   padding: 20px 40px;
   z-index: 1;
-  font-size: 75px; /* 70 → 75 */
+  font-size: 75px;
   color: #f8f7f2;
   display: flex;
   align-items: center;
@@ -289,7 +289,7 @@ body {
 }
 
 .keyword-item {
-  font-size: 27px; /* 25 → 27 */
+  font-size: 27px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -379,7 +379,7 @@ body {
 }
 
 .color-item span {
-  font-size: 15px; /* 14 → 15 */
+  font-size: 15px;
   letter-spacing: 0.05em;
   font-weight: 800;
   background: linear-gradient(
@@ -421,27 +421,27 @@ body {
 
   .project-title {
     font-size: 62px;
-  } /* 55 → 62 */
+  }
   .project-subtitle {
     font-size: 33px;
-  } /* 30 → 33 */
+  }
   .project-desc {
     font-size: 20px;
     max-width: 350px;
-  } /* 18 → 20 */
+  }
   .project-period {
     font-size: 20px;
-  } /* 18 → 20 */
+  }
 
   .typography-display {
     font-size: 65px;
-  } /* 60 → 65 */
+  }
   .overview-desc {
     font-size: 17px;
-  } /* 15 → 17 */
+  }
   .concept-desc {
     font-size: 17px;
-  } /* 15 → 17 */
+  }
   .color-img {
     width: 250px;
   }
@@ -467,22 +467,22 @@ body {
   }
   .title-todo-tag span {
     font-size: 32px;
-  } /* 30 → 32 */
+  }
 
   .project-title {
     font-size: 50px;
     padding: 20px 0;
-  } /* 45 → 50 */
+  }
   .project-subtitle {
     font-size: 28px;
-  } /* 26 → 28 */
+  }
   .project-desc {
     font-size: 17px;
     max-width: 100%;
-  } /* 15 → 17 */
+  }
   .project-period {
     font-size: 17px;
-  } /* 15 → 17 */
+  }
   .project-txt {
     padding: 60px 0 0;
   }
@@ -496,18 +496,18 @@ body {
   }
   .overview-desc {
     font-size: 16px;
-  } /* 14 → 16 */
+  }
   .overview-content {
     gap: 30px;
   }
   .concept-desc {
     font-size: 16px;
-  } /* 14 → 16 */
+  }
 
   .typography-display {
     font-size: 52px;
     padding: 15px 30px;
-  } /* 48 → 52 */
+  }
 
   .color-list {
     padding: 0 20px;
@@ -517,11 +517,11 @@ body {
   }
   .color-item span {
     font-size: 13px;
-  } /* 12 → 13 */
+  }
 
   .keyword-item {
     font-size: 24px;
-  } /* 22 → 24 */
+  }
   .keyword-text {
     width: 100px;
     height: 100px;
@@ -554,7 +554,7 @@ body {
   }
   .title-todo-tag span {
     font-size: 28px;
-  } /* 26 → 28 */
+  }
 
   .project-title {
     font-size: 42px; /* 38 → 42 */
@@ -564,13 +564,13 @@ body {
   }
   .project-subtitle {
     font-size: 26px;
-  } /* 24 → 26 */
+  }
   .project-desc {
     font-size: 16px;
-  } /* 14 → 16 */
+  }
   .project-period {
     font-size: 16px;
-  } /* 14 → 16 */
+  }
   .project-txt {
     padding: 50px 0 0;
   }
@@ -598,14 +598,14 @@ body {
   }
   .overview-desc {
     font-size: 16px;
-  } /* 14 → 16 */
+  }
   .concept-desc {
     font-size: 16px;
-  } /* 14 → 16 */
+  }
 
   .typography-display {
     font-size: 46px;
-  } /* 42 → 46 */
+  }
   .color-img {
     width: 160px;
   }
@@ -644,7 +644,7 @@ body {
   }
   .title-todo-tag span {
     font-size: 26px;
-  } /* 24 → 26 */
+  }
 
   .todo-tag {
     margin-top: 25px;
@@ -655,7 +655,7 @@ body {
   }
   .todo-tag span {
     font-size: 14px;
-  } /* 13 → 14 */
+  }
 
   .project-title {
     font-size: 36px; /* 32 → 36 */
@@ -666,18 +666,21 @@ body {
   .project-subtitle {
     font-size: 22px;
     margin-bottom: 12px;
-  } /* 20 → 22 */
+  }
+
   .project-desc {
     max-width: 100%;
     font-size: 15px;
     line-height: 1.7;
-  } /* 13 → 15 */
+  }
+
   .project-txt {
     padding: 40px 0 0;
   }
+
   .project-period {
     font-size: 15px;
-  } /* 13 → 15 */
+  }
 
   .project-tools {
     display: flex;
@@ -693,7 +696,7 @@ body {
   }
   .overview-desc {
     font-size: 15px;
-  } /* 13 → 15 */
+  }
 
   .overview-content {
     grid-template-columns: 1fr;
@@ -714,16 +717,16 @@ body {
   }
   .overview-content .todo-tag span {
     font-size: 13px;
-  } /* 12 → 13 */
+  }
 
   .concept-desc {
     font-size: 15px;
-  } /* 13 → 15 */
+  }
 
   .typography-display {
     font-size: 44px;
     padding: 18px 25px;
-  } /* 40 → 44 */
+  }
 
   .keyword-list {
     flex-direction: column;
@@ -733,7 +736,8 @@ body {
   .keyword-item {
     font-size: 21px;
     gap: 7px;
-  } /* 19 → 21 */
+  }
+
   .keyword-text {
     width: 85px;
     height: 85px;
@@ -759,7 +763,7 @@ body {
   }
   .color-item span {
     font-size: 12px;
-  } /* 11 → 12 */
+  }
 }
 
 /* 초소형 모바일 (480px 이하) */
@@ -780,7 +784,7 @@ body {
   }
   .title-todo-tag span {
     font-size: 22px;
-  } /* 20 → 22 */
+  }
 
   .todo-tag img {
     width: 80px;
@@ -788,22 +792,26 @@ body {
   }
   .todo-tag span {
     font-size: 12px;
-  } /* 11 → 12 */
+  }
 
   .project-title {
     font-size: 30px;
     padding: 12px 0;
-  } /* 26 → 30 */
+  }
+
   .project-subtitle {
     font-size: 19px;
-  } /* 17 → 19 */
+  }
+
   .project-desc {
     font-size: 14px;
     line-height: 1.8;
-  } /* 12 → 14 */
+  }
+
   .project-period {
     font-size: 14px;
-  } /* 12 → 14 */
+  }
+
   .project-tools img {
     width: 38px;
     height: 38px;
@@ -815,19 +823,20 @@ body {
   }
   .overview-content .todo-tag span {
     font-size: 12px;
-  } /* 11 → 12 */
+  }
+
   .overview-desc {
     font-size: 14px;
-  } /* 12 → 14 */
+  }
+
   .concept-desc {
     font-size: 14px;
-  } /* 12 → 14 */
+  }
 
   .typography-display {
     font-size: 36px;
     padding: 15px 20px;
-  } /* 32 → 36 */
-
+  }
   .color-list {
     padding: 0 10px;
     gap: 8px;
@@ -840,11 +849,12 @@ body {
   }
   .color-item span {
     font-size: 11px;
-  } /* 10 → 11 */
+  }
 
   .keyword-item {
     font-size: 19px;
-  } /* 17 → 19 */
+  }
+
   .keyword-text {
     width: 75px;
     height: 75px;
